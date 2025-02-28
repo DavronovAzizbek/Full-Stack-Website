@@ -1,23 +1,23 @@
-import {createBrowserRouter, RouterProvider} from "react-router-dom"
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
-
+import Dashboard from "./Pages/Dashboard";
 
 function App() {
-  
   const router = createBrowserRouter([
     {
-      path: "/"
+      path: "/",
+      exact: true,
       element: (
         <>
-        <Home/>
+          <Dashboard />
         </>
-      )
-   }
- ])
+      ),
+    },
+  ]);
 
   return (
     <>
-    <RouterProvider router={router} />
+      <RouterProvider router={router} />
     </>
   );
 }
